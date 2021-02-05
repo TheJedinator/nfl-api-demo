@@ -18,10 +18,11 @@ class LeagueModel(str, Enum):
 
 
 # Data formatted as specified by client
+# Would normally use a date time class here for eventdate/time but desired format differs from default
 class ScrubbedData(BaseModel):
     event_id: int
-    event_date: datetime.date
-    event_time: datetime.time
+    event_date: str #datetime.date
+    event_time: str #datetime.time
     away_team_id: int
     away_nick_name: str
     away_city: str
@@ -89,7 +90,7 @@ def third_party_board(league, start, end):
 
                         pretty_score = {
                             'event_id': score.get('event_id'),
-                            'event_date': evt_date,
+                            'event_date': evt_date.strftime("%d-%m-%Y"),
                             'event_time': evt_date.strftime("%H:%M"),
                             'away_team_id': score.get('away_team_id'),
                             'away_nick_name': score.get('away_nick_name'),
