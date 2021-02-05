@@ -1,4 +1,4 @@
-#NFL Stats API
+# NFL Stats API
 
 ### What is this?
 
