@@ -19,6 +19,7 @@ class LeagueModel(str, Enum):
 
 # Data formatted as specified by client
 # Would normally use a date time class here for eventdate/time but desired format differs from default
+# Would strongly encourage ISO8601 Complaint timestamps, or passing around epoch seconds, but that's opinion
 class ScrubbedData(BaseModel):
     event_id: int
     event_date: str #datetime.date
