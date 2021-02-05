@@ -4,7 +4,7 @@
 
 This is an API example using FastAPI, it queries two other APIs and munges the data
 together in a format specified by the client. This is not intended to be "production ready"
-code but is meant to be readable, and written in a way that explains some of my though processes
+code but is meant to be readable, and written in a way that explains some of my thought processes
 
 
 I'm pretty sure the rankings are the latest data, which is likely a problem if we are correlating them to point in time info.
